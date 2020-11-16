@@ -1,0 +1,98 @@
+@charset "UTF-8";
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.main_contents{
+  margin-top: 90px;
+}
+/* 検索欄 */
+
+.search-wrapper {
+  text-align: center;
+  margin: 20px 0 10px 0;
+  margin-top: 57px;
+}
+
+input[type="text"] {
+  width: 85%;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  padding: 5px;
+}
+
+/* 利用者プロフィール */
+
+.user-profile-wrapper {
+  position: relative;
+}
+
+.user-profile-wrapper:hover {
+  background-color: #ddd;
+}
+
+.user-icon {
+  display: inline-block;
+  width: 60px;
+  margin: 5px 10px 5px 10px;
+  border: solid 2px #000;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* 友達一覧 */
+
+/* 友達数表示 */
+
+.friend-list-title {
+  position: relative;
+}
+
+.friend-list-text {
+  font-size: 20px;
+  margin: 10px 0 10px 10px;
+  display: inline-block;
+}
+
+.friend-list-count {
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* 友達プロフィール */
+
+.friend-prifile {
+  position: relative;
+}
+
+.friend-prifile:hover {
+  background-color: #ddd;
+}
+
+.friend-icon {
+  display: inline-block;
+  width: 60px;
+  margin: 5px 10px 5px 10px;
+  border: solid 2px #000;
+  border-radius: 50%;
+}
+
+.friend-name {
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}

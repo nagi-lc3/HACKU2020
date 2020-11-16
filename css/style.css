@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@import url("normalize.css");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+  color: #333;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* カラム */
+
+.leftnavi {
+  width: 200px;
+  padding: 0 15px;
+  background-color: #0f4c81;
+}
+
+.leftnavi h1 img {
+  width: 150px;
+}
+
+.contents {
+  width: 500px;
+  border-right: solid 1px #000;
+  /* 溢れをスクロールできるようにする */
+  overflow: auto;
+  /* スクロールバーを消す（Firefox） */
+  scrollbar-width: none;
+}
+
+.contents::-webkit-scrollbar {
+  /* スクロールバーを消す（Chrome、Safari） */
+  display: none;
+}
+
+.main_contents {
+  margin-top: 80px;
+}
+
+.rightnavi {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.undernavi {
+  display: none;
+}
+
+/* レフトメニュー */
+
+.menu ul {
+  padding: 0;
+}
+
+.menu ul li {
+  list-style: none;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 10px;
+}
+
+.menu ul li a:hover {
+  color: #ff8c00;
+  opacity: 0.8;
+}
+
+.menu ul li a img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.menu ul li:last-child {
+  margin-top: 300px;
+}
+
+/* メインコンテンツ */
+
+.header {
+  position: fixed;
+  z-index: 999;
+  width: 499px;
+  padding: 10px 0;
+  background-color: #0f4c81;
+  height: 80px;
+}
+
+.header ul {
+  display: none;
+}
+
+h1 {
+  font-family: "Fredoka One", cursive;
+  color: #fff;
+  font-size: 62px;
+  letter-spacing: 10px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 10px;
+  margin-top: 20px;
+}
+
+.menu ul li span {
+  margin-left: 15px;
+}
+
+/* ライトメニュー */
+
+/* 全部共通 */
+
+/* 以下レスポンシブ */
+
+@media screen and (max-width: 1024px) {
+  /* 1024pxまでの幅の場合に適応される */
+  .undernavi {
+    display: none;
+  }
+  .leftnavi {
+    width: 200px;
+    padding: 0 15px;
+  }
+  .header {
+    width: 100%;
+  }
+  .contents {
+    flex: 1;
+  }
+  .rightnavi {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  /* 896pxまでの幅の場合に適応される */
+  .leftnavi {
+    display: none;
+  }
+  .contents {
+    flex: 1;
+  }
+  .main_contents {
+    margin-bottom: 80px;
+  }
+  .rightnavi {
+    display: none;
+  }
+  /* undernaviを出現させる */
+  .undernavi {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #0f4c81;
+    position: fixed;
+    z-index: 999;
+    padding: 10px 0;
+  }
+  .under_menu ul {
+    padding-top: 5px;
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .under_menu ul li {
+    list-style: none;
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 4vh;
+  }
+  .under_menu ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .under_menu ul li a:hover {
+    color: #ff8c00;
+    opacity: 0.8;
+  }
+  .under_menu ul li a img {
+    width: 40px;
+  }
+  .under_menu ul li span {
+    display: block;
+  }
+  .under_menu ul li:last-child {
+    margin-right: 4vh;
+  }
+  /* 設定アイコンを出現させる */
+  .header {
+    position: fixed;
+    text-align: center;
+  }
+  .header h2 {
+    display: inline-block;
+  }
+  .header ul {
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 35%;
+    left: 85%;
+  }
+  .header ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  .header ul li a img {
+    width: 30px;
+  }
+}

@@ -1,0 +1,162 @@
+@charset "UTF-8";
+.outer {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.outer img {
+  width: 5%;
+  height: auto;
+}
+
+.inner {
+  display: inline-block;
+  text-align: left;
+}
+
+.match-reception {
+  text-align: center;
+}
+
+/* アイコン */
+
+.char-icon {
+  width: 20px;
+  height: auto;
+  border: solid 2px #000;
+  border-radius: 50%;
+}
+
+.char-icon-under {
+  display: inline;
+  width: 10px;
+  height: auto;
+}
+
+/* アコーディオンメニュー */
+
+.menu-reception {
+  width: 100%;
+}
+
+.menu-reception a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+label {
+  display: block;
+  padding: 15px;
+  line-height: 1;
+  color: #fff;
+  font-weight: bold;
+  background: #006699;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-bottom: solid 1px #000;
+}
+
+label:hover {
+  background-color: #0077aa;
+  opacity: 0.8;
+}
+
+input {
+  display: none;
+}
+
+input[type="checkbox"].open_close_c {
+  display: none;
+}
+
+input[type="checkbox"].open_close_c+ul {
+  height: 0;
+  overflow: hidden;
+}
+
+input[type="checkbox"].open_close_c:checked+ul {
+  height: 110px;
+  padding: 10px;
+}
+
+.menu-reception ul {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  list-style: none;
+}
+
+.menu-reception li {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#menu_bar01:checked~#links01 li,
+#menu_bar02:checked~#links02 li,
+#menu_bar03:checked~#links03 li,
+#menu_bar04:checked~#links04 li,
+#menu_bar05:checked~#links05 li,
+#menu_bar06:checked~#links06 li,
+#menu_bar07:checked~#links07 li,
+#menu_bar08:checked~#links08 li,
+#menu_bar09:checked~#links09 li {
+  height: 74px;
+  opacity: 1;
+}
+
+/* ボタン */
+
+.botton-1 {
+  text-align: center;
+}
+
+/* input[type="submit"]{
+	background-color: #1188BB;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: auto;
+	border-radius: 10px;
+	outline: none;
+	cursor: pointer;
+} */
+
+/* 名前ホバー時に背景色を変える */
+
+.menu-reception li a:hover {
+  background-color: #ddd;
+}
+
+.menu-reception li a img {
+  margin: 5px 10px;
+  width: 60px;
+}
+
+.menu-reception li {
+  position: relative;
+}
+
+.menu-reception span {
+  position: absolute;
+  top: 28px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-reception {
+  position: relative;
+}
+
+.char-icon-under {
+  position: absolute;
+  right: 20px;
+}

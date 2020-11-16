@@ -1,0 +1,284 @@
+@charset "UTF-8";
+.conatents {
+  position: relative;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* ------------------ 時間帯指定エリア ------------------ */
+
+.time_contents {
+  position: relative;
+  width: 321px;
+  height: 85px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+from {
+  position: absolute;
+}
+
+.time_select {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.time_select li {
+  position: relative;
+  display: inline-block;
+  margin: 2px 8px;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.time_select input {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.time_select input[type="checkbox"]+label {
+  display: block;
+  /* background-image: url(../images/moming.png);
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-color: paleturquoise;
+  border: 3px solid;
+  border-color: transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.morning input[type="checkbox"]+label {
+  display: block;
+  background-image: url(../images/morning.png);
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.noon input[type="checkbox"]+label {
+  display: block;
+  background-image: url(../images/noon.png);
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.evening input[type="checkbox"]+label {
+  display: block;
+  background-image: url(../images/evening.png);
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.night input[type="checkbox"]+label {
+  display: block;
+  background-image: url(../images/night.png);
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.time_index {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+/* ------------------ 時間帯指定エリア終了------------------ */
+
+/* ↓選択したときの効果 */
+
+.time_select input[type="checkbox"]:checked+label {
+  /* background-image: url(../images/noon.png); */
+  background-color: royalblue;
+}
+
+.time_index {
+  display: flex;
+  font-weight: bold;
+}
+
+/* ↓朝昼夕夜の配置を強引に配置 */
+
+.time_index li {
+  margin: 5px 35px 0 30px;
+}
+
+.friend_select {
+  height: auto;
+  /* 溢れをスクロールできるようにする */
+  overflow: auto;
+  /* スクロールバーを消す（Firefox） */
+  scrollbar-width: none;
+}
+
+.friend_select::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
+}
+
+/* .container {
+  height: 150px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.container::-webkit-scrollbar {
+  display:none;
+} */
+
+.pic {
+  /* background: pink; */
+  /* width: 80px; */
+  display: flex;
+  text-align: left;
+  height: 74px;
+}
+
+.pic img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* 初期化 */
+
+input, textarea, select {
+  appearance: none;
+  /* ベンダープリフェックス */
+  /* webkit IE以外  moz IE*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* オートコンプリート使用後の背景色指定（自動入力されchromeでは青色になる）*/
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #fff inset;
+}
+
+/* チェックボックス */
+
+.pic input[type="checkbox"]+label {
+  cursor: pointer;
+  padding: 3px 3px 3px 62px;
+  position: relative;
+}
+
+.pic input[type="checkbox"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  margin-left: 20px;
+}
+
+.pic input[type="checkbox"]:checked+label::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 7.5px;
+  border-left: 4px solid #007bbb;
+  border-bottom: 4px solid #007bbb;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 32%;
+  left: 3px;
+  margin-left: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+}
+
+label:hover {
+  background-color: #ddd;
+}
+
+.pic span {
+  position: absolute;
+  top: 30px;
+  left: 150px;
+  display: inline;
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* submit */
+
+input[type="submit"] {
+  background-color: #006699;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0f4c81;
+}
+
+input {
+  cursor: pointer;
+}
+
+.main_contents {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+h3 {
+  text-align: center;
+  padding-left: 24px;
+}
+
+.when {
+  margin-bottom: 20px;
+}
+
+.person {
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+
+
+#back_button a{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  padding: 20px;
+}
+.talk_back {
+  transform: rotate(90deg);
+  width: 15px;
+}

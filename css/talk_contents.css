@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/* .body {
+  width: 2436px;
+  height: 1125px;
+} */
+
+.contents {
+  position: relative;
+}
+
+.main_contents {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  margin-top: 20px;
+}
+
+.main_contents::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
+}
+
+.body {
+  background: skyblue;
+}
+
+.header {
+  position: fixed;
+}
+
+.contents {
+  background: skyblue;
+}
+
+.container {
+  margin: 0;
+  background: skyblue;
+  height: 100%;
+}
+
+:focus {
+  outline: none;
+}
+
+#back_button a {
+  position: absolute;
+  padding: 20px;
+  width: 15px;
+  left: 0px;
+  top: 17px;
+}
+
+#back_button img {
+  width: 15px;
+}
+
+/* ユーザー名を左寄せバージョン */
+
+.header h2 {
+  position: absolute;
+  left: 50px;
+  top: 11px;
+}
+
+/* ユーザー名を中央寄せバージョン */
+
+/* .header h2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 11px;
+} */
+
+/* 約束日を中央寄せ */
+
+/* .header h3 {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+
+/* margin-right: auto; */
+
+/* top:5px;
+} */
+
+/* 約束日を右寄せ */
+
+.header h3 {
+  position: absolute;
+  display: block;
+  right: 15px;
+  color: #fff;
+  /* left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  /* margin-right: auto; */
+  top: 15px;
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  /* height: 1800px; */
+  list-style: none;
+}
+
+.messages p {
+  margin: 0;
+}
+
+.messages li {
+  display: flex;
+}
+
+.messages li + li {
+  margin-top: 10px;
+}
+
+.messages li + li p {
+  margin: 0;
+}
+
+li.right-side {
+  flex-direction: row-reverse;
+}
+
+.pic p {
+  font-size: 5px;
+}
+
+.pic {
+  /* background: pink; */
+  width: 80px;
+  text-align: center;
+}
+
+.pic img {
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 50%;
+}
+
+.text {
+  background: #fff;
+  border-radius: 15px;
+  padding: 7px;
+  max-width: 60%;
+  line-height: 1.8;
+  position: relative;
+}
+
+.text p {
+  margin: 0;
+}
+
+.text::before {
+  content: "";
+  width: 0;
+  height: 0;
+  /* border: 8px solid #fff; */
+  border: 8px solid transparent;
+  position: absolute;
+}
+
+.left-side .text::before {
+  top: 12px;
+  left: -16px;
+  border-right-color: #fff;
+}
+
+.right-side .text::before {
+  top: 12px;
+  right: -16px;
+  border-left-color: #fff;
+}
+
+.talk_back {
+  transform: rotate(90deg);
+}
+/* 入力エリア */
+
+#bms_send {
+  background-color: #eee;
+  /*タイムラインの色と同じにする*/
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  height: 48px;
+  width: 499px;
+  padding: 5px;
+  bottom: 0px;
+  position: fixed;
+}
+
+#bms_send_message {
+  width: calc(100% - 105px);
+  /*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+  line-height: 16px;
+  height: 30px;
+  margin: 3px 0 4px 0;
+  padding: 6px 43px 5px 15px;
+  border-radius: 50px;
+  /*角丸*/
+  text-align: left;
+  /*文字を左寄せ*/
+  resize: none;
+  /* 右下の//を消した */
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2) inset;
+  /*内側に影を入れてテキストエリアらしくした*/
+  box-sizing: border-box;
+  /*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+  position: relative;
+}
+
+#send_btn_stamp {
+  position: absolute;
+  bottom: 13px;
+  left: calc(100% - 81px);
+}
+
+#bms_send_btn1 {
+  width: 37px;
+  height: 37px;
+  margin: 0 10px;
+  font-size: 16px;
+  line-height: 3em;
+  float: left;
+  /*bms_sendに対して右寄せ*/
+  color: #fff;
+  font-weight: bold;
+  /* background: #bcbcbc; */
+  text-align: center;
+  /*文字をボタン中央に表示*/
+  /* border: 1px solid #bbb; */
+  border-radius: 4px;
+  /*角丸*/
+  box-sizing: border-box;
+  /*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+}
+
+#bms_send_btn {
+  width: 37px;
+  height: 37px;
+  margin: 0 10px;
+  font-size: 16px;
+  line-height: 3em;
+  float: right;
+  /*bms_sendに対して右寄せ*/
+  color: #fff;
+  font-weight: bold;
+  /* background: #bcbcbc; */
+  text-align: center;
+  /*文字をボタン中央に表示*/
+  /* border: 1px solid #bbb; */
+  border-radius: 4px;
+  /*角丸*/
+  box-sizing: border-box;
+  /*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+}
+
+.send_btn_image {
+  width: 22.5px;
+  height: 22.5px;
+}
+
+.send {
+  position: relative;
+}
+
+.send_image {
+  position: absolute;
+  top: -34px;
+  right: 2px;
+}
+
+/* #bms_send_btn:hover {
+  background: #13178E;
+  cursor: pointer;
+} */
+
+@media screen and (max-width: 1024px) {
+  #bms_send {
+    background-color: #eee;
+    /*タイムラインの色と同じにする*/
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 48px;
+    width: calc(100% - 202px);
+    padding: 5px;
+    bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  #bms_send {
+    background-color: #eee;
+    /*タイムラインの色と同じにする*/
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 48px;
+    width: 100%;
+    padding: 5px;
+    bottom: 0px;
+  }
+}

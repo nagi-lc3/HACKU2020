@@ -1,0 +1,368 @@
+@charset "UTF-8";
+@media screen and (max-width: 896px) {
+  .container-calendar {
+    background: #ffffff;
+    width: 100%;
+    margin: 0 0 0 auto;
+    margin-right: 2em;
+    margin-top: 5em;
+    overflow: auto;
+    max-width: 800px;
+  }
+  .button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ff8c00;
+    color: #fff;
+    border: 1px solid #ff8c00;
+    border-radius: 50%;
+    padding: 20px 25px;
+  }
+  .table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+  }
+  .table-calendar th, .table-calendar td {
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    vertical-align: top;
+  }
+  td a {
+    padding: 32.5%;
+  }
+  .date-picker.selected {
+    font-weight: bold;
+    color: #fff;
+    background: #ffec47;
+  }
+  .date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+  }
+  #monthAndYear {
+    font-size: 46px;
+    margin: 0;
+    font-weight: normal;
+    margin-bottom: -56px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .day_wrapper {
+    margin-bottom: 54px;
+  }
+  /* 日曜 */
+  .date-picker:nth-child(1) {
+    color: red;
+  }
+  /* 土曜 */
+  .date-picker:nth-child(7) {
+    color: blue;
+  }
+  .button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+  }
+  #previous {
+    float: left;
+    margin-left: 1em;
+    outline: 0;
+  }
+  #previous:focus {
+    outline: 0;
+  }
+  #next {
+    float: right;
+    margin-right: 1em;
+    outline: 0;
+  }
+  #next:focus {
+    outline: 0;
+  }
+  .footer-container-calendar {
+    margin-top: 40px;
+    padding: 10px 0;
+    margin-left: 200px;
+    font-size: 20px;
+  }
+  .footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #454545;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 20px;
+  }
+}
+
+/* WEB版 */
+
+@media screen and (min-width: 897px) {
+  .container-calendar {
+    background: #ffffff;
+    width: 100%;
+    margin: 0 0 0 auto;
+    margin-right: 2em;
+    margin-top: 5em;
+    overflow: auto;
+    max-width: 800px;
+  }
+  .button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ff8c00;
+    color: #fff;
+    border: 1px solid #ff8c00;
+    border-radius: 4px;
+    padding: 20px 10px;
+  }
+  .table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+  }
+  .table-calendar th, .table-calendar td {
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    vertical-align: top;
+    font-weight: bold;
+  }
+  td a {
+    padding: 21.75px;
+  }
+  .date-picker.selected {
+    font-weight: bold;
+    color: #fff;
+    background: #ffec47;
+  }
+  .date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+  }
+  #monthAndYear {
+    font-size: 46px;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: -54px;
+    text-align: center;
+    margin-top: 0;
+  }
+  .day_wrapper {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  /* 日曜 */
+  .date-picker:nth-child(1) {
+    color: red;
+  }
+  /* 土曜 */
+  .date-picker:nth-child(7) {
+    color: blue;
+  }
+  .button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+  }
+  #previous {
+    float: left;
+    margin-left: 1em;
+    outline: 0;
+  }
+  #previous:focus {
+    outline: 0;
+  }
+  #next {
+    float: right;
+    margin-right: 1em;
+    outline: 0;
+  }
+  #next:focus {
+    outline: 0;
+  }
+  .footer-container-calendar {
+    margin-top: 40px;
+    padding: 10px 0;
+    margin-left: 100px;
+    font-size: 24px;
+  }
+  .footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #454545;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 14px;
+  }
+}
+
+/* スマホ版 */
+
+@media screen and (max-width: 469px) {
+  .container-calendar {
+    background: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+    margin-right: 2em;
+    margin-top: 5em;
+    overflow: auto;
+    max-width: 469px;
+  }
+  .button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ff8c00;
+    color: #fff;
+    border: 1px solid #ff8c00;
+    border-radius: 50%;
+    padding: 16px 20px;
+  }
+  .table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+  }
+  .table-calendar th, .table-calendar td {
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    vertical-align: top;
+  }
+  td a {
+    padding: 33%;
+  }
+  .date-picker.selected {
+    font-weight: bold;
+    color: #fff;
+    background: #ffec47;
+  }
+  .date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+  }
+  #monthAndYear {
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -46px;
+  }
+  .day_wrapper {
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+  /* 日曜 */
+  .date-picker:nth-child(1) {
+    color: red;
+  }
+  /* 土曜 */
+  .date-picker:nth-child(7) {
+    color: blue;
+  }
+  .button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+  }
+  #previous {
+    float: left;
+    margin-left: 1em;
+    outline: 0;
+  }
+  #previous:focus {
+    outline: 0;
+  }
+  #next {
+    float: right;
+    margin-right: 1em;
+    outline: 0;
+  }
+  #next:focus {
+    outline: 0;
+  }
+  .footer-container-calendar {
+    margin-top: 20px;
+    padding: 10px 0;
+    margin-left: 58px;
+    font-size: 14px;
+  }
+  .footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #454545;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:897px) and ( max-width:1024px) {
+  td a {
+    padding: 37.3%;
+  }
+}
+
+/* 日付入力削除 */
+
+.footer-container-calendar {}
+
+label, #year, #month {
+  display: none;
+}
+
+td:hover {
+  background-color: #ddd;
+}
+
+.date-picker.selected:hover {
+  background-color: #ff8c00;
+}
+
+td a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #333;
+}
+
+.date-picker:nth-child(1) a {
+  color: red;
+}
+
+/* 土曜 */
+
+.date-picker:nth-child(7) a {
+  color: blue;
+}
+
+.scedule {
+  text-align: center;
+}
+
+.scedule p {
+  display: inline-block;
+  background-color: #006699;
+  padding: 20px 40px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.scedule p:hover {
+  background-color: #0f4c81;
+}
